@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>COQUA_COIN</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="my-16 flex-col text-center m-auto ">
+            <div class="flex justify-between w-6/12 m-auto	">
+                <button class="bg-cover	emptyStar"></button>
+                <input type="text" name="" id="" class="border-2 rounded border-blue-500 w-full" />
+            </div>
+            <!-- <div class="flex divide-x-2 divide-gray-500 w-6/12 m-auto my-4"> -->
+            <div class="flex divide-x-2 w-6/12 m-auto my-6 border-t-2 border-b-2 py-2">
+                <div class="rounded-full bg-yellow-200 w-1/4 mx-4">코인명</div>
+                <div class="rounded-full bg-yellow-200 w-1/4 mx-4">가격</div>
+                <div class="rounded-full bg-yellow-200 w-1/4 mx-4">등락률</div>
+                <div class="rounded-full bg-yellow-200 w-1/4 mx-4">거래대금</div>
+            </div>
+            <div class="divide-y-2 divide-dashed divide-yellow-500 w-6/12 m-auto border-4 border-indigo-200">
+                <div class="flex divide-x-2 divide-gray-200 m-auto h-8">
+                    <div class="w-1/4">비트코인</div>
+                    <div class="w-1/4">백만원</div>
+                    <div class="w-1/4">10%</div>
+                    <div class="w-1/4">1조</div>
+                </div>
+                <div class="flex divide-x-2 divide-gray-200 m-auto h-8">
+                    <div class="w-1/4">비트코인</div>
+                    <div class="w-1/4">백만원</div>
+                    <div class="w-1/4">10%</div>
+                    <div class="w-1/4">1조</div>
+                </div>
+                <div class="flex divide-x-2 divide-gray-200 m-auto h-8">
+                    <div class="w-1/4">비트코인</div>
+                    <div class="w-1/4">백만원</div>
+                    <div class="w-1/4">10%</div>
+                    <div class="w-1/4">1조</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <button
+            class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Click me
+        </button>
+        <button
+            class="py-2 px-4 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-opacity-75">
+            Click me
+        </button>
+
+        <div class="bg-gradient-to-br from-fuchsia-500 to-purple-600"></div>
+        <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+            <div class="flex-shrink-0">
+                <!-- <img class="h-12 w-12" src="/img/logo.svg" alt="ChitChat Logo"> -->
+            </div>
+            <div>
+                <div class="text-xl font-medium text-black">ChitChat</div>
+                <p class="text-gray-500">You have a new message!</p>
+            </div>
+        </div>
+    </div>
+    <!-- https://www.youtube.com/watch?v=bxmDnn7lrnk&ab_channel=TheNetNinja -->
+
+    <script type="module" src="js/index.js"></script>
+    <script>
+        console.log("A")
+        const getTickData = function () {
+            fetch('https://api.korbit.co.kr/v1/ticker/detailed/all')
+                .then(function (response) {
+                    console.log("B")
+                    console.log(response.json())
+                    return response.json()
+                })
+                .catch(function () {
+                    console.log("error")
+                })
+        }
+        getTickData()
+    </script>
+</body>
+
+</html>
