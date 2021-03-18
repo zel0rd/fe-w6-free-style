@@ -1,3 +1,4 @@
 
 coin/node_modules/*
 firebaseTest
+coin/.env
