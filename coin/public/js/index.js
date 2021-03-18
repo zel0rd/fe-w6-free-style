@@ -1,5 +1,9 @@
 import { _ } from './util.js';
-// import { getTickData } from './getData.js';
+import { repeatRenderTick } from './renderTickData.js'
+import { favoriteBtn } from './favoriteBtn.js'
 
-// getTickData()
-// import { rollKeyWord } from './rolllKeyWord.js';
+function init(){
+    repeatRenderTick();
+}
+
+init()
